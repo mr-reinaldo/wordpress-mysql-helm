@@ -1,0 +1,21 @@
+auth:
+  database: wordpress_db
+  password: wordpress
+  username: wordpress
+  rootPassword: $$2a$$10$
+  createDatabase: true
+
+# Primary database configuration
+primary:
+  # Enable persistence using Persistent Volume Claims
+  persistence:
+    # If true, use a Persistent Volume Claim, If false, use emptyDir
+    enabled: true
+  # MySQL primary Pod security context
+  podSecurityContext:
+    enabled: false
+    fsGroup: 1001
+  # MySQL primary container security context
+  containerSecurityContext:
+    enabled: false
+    runAsUser: 1001

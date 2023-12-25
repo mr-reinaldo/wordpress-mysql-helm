@@ -1,0 +1,56 @@
+# Ingresss Configurarion
+ingress:
+  # Create a TLS secret
+  tls: false
+  # Use a custon hostname
+  enabled: true
+  # Hostname
+  hostname: wordpress.local
+
+# MariaDB details
+mariadb:
+
+  # Use a new MariaDB database hosted in the cluster
+  enabled: false
+
+
+metrics:
+
+  # Enable Metrics
+  enabled: false
+
+# Service configuration
+service:
+  # Service type
+  type: ClusterIP
+
+persistence:
+  # Persistent Volume size
+  size: 1Gi
+
+# Admin email
+wordpressEmail: admin@wordpress.com
+
+
+# External database Details
+externalDatabase:
+  # Host of the external database
+  host: mysql
+  # Database port
+  port: 3306
+  # Database user
+  user: wordpress
+  # Database name
+  database: wordpress_db
+  # Database password
+  password: wordpress
+
+
+# Blog Name
+wordpressBlogName: My Blog
+
+# Wordpress Password
+wordpressPassword: wordpress
+
+# Wordpress Username
+wordpressUsername: wordpress
